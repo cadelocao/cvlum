@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envio de Currículo - CVLUM</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+        h1{
+            color: #222034;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark text-white">
+        <a class="navbar-brand text-white" href="pag_inicial.html">
+        <img src="hayata_logo_alt.png" width="30" height="30" class="d-inline-block align-top" alt="logo hayata">
+            HAYATA RH
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="buscar.html">Pesquisar Currículo</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 class="text-center mb-5">Envio de Currículo</h2>
+            <form id="curriculoForm" action="envio.php" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" class="form-control" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="number" class="form-control" id="telefone" name="telefone" required>
+                </div>
+                <div class="form-group">
+                    <label for="area">Área de Atuação:</label>
+                    <select class="form-control" id="area" name="area">
+                        <option value="Administração">Administração</option>
+                        <option value="Audiovisual">Audiovisual</option>
+                        <option value="Culinária">Culinária</option>
+                        <option value="Dança Artística">Dança Artística</option>
+                        <option value="Design">Design</option>
+                        <option value="Edição">Edição</option>
+                        <option value="Engenharia">Engenharia</option>
+                        <option value="Jornalística">Jornalística</option>
+                        <option value="Médica">Médica</option>
+                        <option value="Musical">Musical</option>
+                        <option value="Pedagógica">Pedagógica</option>
+                        <option value="Redação">Redação</option>
+                        <option value="Tecnológica">Tecnológica</option>
+                        
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="descricao">Descrição Breve:</label>
+                    <textarea class="form-control" id="descricao" name="descricao" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="curriculo">Anexar Currículo:</label>
+                    <input type="file" class="form-control-file" id="curriculo" name="curriculo" required>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="termsCheckbox" required>
+                    <label class="form-check-label" for="termsCheckbox">
+                        Eu concordo com os <a href="termos_de_envio.html">Termos de Uso</a>.
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary" href="envio.html">Enviar Currículo</button>
+            </form>
+            
+        </div>
+    </div>
+</div>
+
+<footer class="text-center py-4 mt-5 bg-dark text-white">
+    <img src="cvlum_logo.png" alt="Logo CVLUM" width="50" href="login.html">
+    <a class="text-white" href="login.html">Powered By &copy;CVLUM.</a>
+</footer>
+</body>
+</html>
